@@ -11,7 +11,8 @@ A fun Chrome extension that plays Cristiano Ronaldo's iconic "Siuuu!" celebratio
 
 - **One-Click Sound**: Click the extension icon to instantly hear Ronaldo's "Siuuu!" 
 - **Keyboard Shortcut**: Press `Ctrl+Shift+S` (or `Cmd+Shift+S` on Mac) for quick access
-- **Works Everywhere**: Functions on any webpage
+- **Smart Error Handling**: Shows a helpful popup when sound can't be played on restricted pages
+- **Works Everywhere**: Functions on any regular webpage
 - **Privacy First**: No data collection, completely offline after installation
 
 ## 🚀 Installation
@@ -37,12 +38,13 @@ A fun Chrome extension that plays Cristiano Ronaldo's iconic "Siuuu!" celebratio
 
 ### Method 1: Click the Icon
 - Look for the Ronaldo extension icon in your Chrome toolbar
-- Click it to play the "Siuuu!" sound
-- Watch the icon animate while the sound plays
+- Click it to play the "Siuuu!" sound instantly
+- On restricted pages (like Chrome settings), a helpful popup will explain why the sound can't play
 
 ### Method 2: Keyboard Shortcut
 - Press `Ctrl+Shift+S` (Windows/Linux) or `Cmd+Shift+S` (Mac)
-- Works on any webpage (except Chrome internal pages)
+- Works on any regular webpage
+- On restricted pages, shows a popup with helpful information
 
 ## 📁 Project Structure
 
@@ -50,6 +52,8 @@ A fun Chrome extension that plays Cristiano Ronaldo's iconic "Siuuu!" celebratio
 Ronaldo Siu Extension/
 ├── manifest.json       # Extension configuration
 ├── background.js       # Main extension logic
+├── popup.html         # Error popup interface
+├── popup.js           # Popup logic and auto-close
 ├── icon.png           # Default extension icon
 ├── siuuu.mp3         # Ronaldo's "Siuuu!" sound file
 └── README.md         # This file
@@ -63,6 +67,7 @@ Ronaldo Siu Extension/
   - `scripting`: Inject audio playback script
 - **Service Worker**: Background script for handling icon clicks and shortcuts
 - **Audio Playback**: Uses Web Audio API via content script injection
+- **Error Handling**: Smart popup system that only appears when sound cannot be played
 
 ## 🔧 Development
 
@@ -108,8 +113,9 @@ Ronaldo Siu Extension/
 
 ### Sound Not Playing
 - Check if audio is muted in your browser/system
-- Ensure you're not on a Chrome internal page (`chrome://`, `edge://`, etc.)
-- Try refreshing the webpage and clicking again
+- If on a Chrome internal page (`chrome://`, `edge://`, etc.), you'll see a helpful popup explaining the limitation
+- Try the extension on a regular website like Google, YouTube, or any news site
+- Refresh the webpage and try again if needed
 
 
 ### Keyboard Shortcut Not Working

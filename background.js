@@ -12,15 +12,22 @@ function playSound() {
                 tab.url.startsWith('edge://') ||
                 tab.url.startsWith('about:')) {
                 
-                // Show a notification to the user
-                chrome.notifications.create({
-                    type: 'basic',
-                    iconUrl: 'icon.png',
-                    title: 'Ronaldo Siuuu!',
-                    message: 'This extension cannot play sounds on Chrome internal pages. Please try on a regular website!'
+                // Show popup for restricted pages
+                chrome.action.setPopup({
+                    tabId: tab.id,
+                    popup: 'popup.html'
                 });
+                
+                // Open the popup programmatically
+                chrome.action.openPopup();
                 return;
             }
+            
+            // Ensure no popup is set for regular pages
+            chrome.action.setPopup({
+                tabId: tab.id,
+                popup: ''
+            });
             
             chrome.scripting.executeScript({
                 target: {tabId: tab.id},
@@ -31,13 +38,12 @@ function playSound() {
                 }
             }).catch(error => {
                 console.log('Script injection failed:', error);
-                // Fallback notification
-                chrome.notifications.create({
-                    type: 'basic',
-                    iconUrl: 'icon.png',
-                    title: 'Ronaldo Siuuu!',
-                    message: 'Cannot play sound on this page. Please try a regular website!'
+                // Show popup for script injection failures
+                chrome.action.setPopup({
+                    tabId: tab.id,
+                    popup: 'popup.html'
                 });
+                chrome.action.openPopup();
             });
         }
     });

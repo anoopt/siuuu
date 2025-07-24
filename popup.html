@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <style>
+        body {
+            width: 280px;
+            padding: 15px;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            font-size: 14px;
+            line-height: 1.4;
+        }
+        .container {
+            text-align: center;
+        }
+        .icon {
+            width: 48px;
+            height: 48px;
+            margin: 0 auto 10px;
+            display: block;
+        }
+        .title {
+            font-size: 16px;
+            font-weight: bold;
+            margin-bottom: 8px;
+            color: #333;
+        }
+        .error-message {
+            color: #d93025;
+            background-color: #fce8e6;
+            padding: 12px;
+            border-radius: 6px;
+            margin-bottom: 15px;
+            border-left: 4px solid #d93025;
+        }
+        .close-button {
+            background-color: #1a73e8;
+            color: white;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 14px;
+        }
+        .close-button:hover {
+            background-color: #1557b0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img src="icon.png" alt="Ronaldo Icon" class="icon">
+        <div class="title">Cannot Play Sound</div>
+        
+        <div class="error-message">
+            This extension cannot play sounds on Chrome internal pages. Please try on a regular website!
+        </div>
+        
+        <button id="closeButton" class="close-button">Got it</button>
+    </div>
+    
+    <script src="popup.js"></script>
+</body>
+</html>

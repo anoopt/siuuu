@@ -1,5 +1,8 @@
 # Ronaldo Siuuu! Chrome Extension
 
+[![Chrome Web Store](https://img.shields.io/chrome-web-store/v/ajjnpmpdkgkcfolnmkfjaeimhaebcpfn?style=for-the-badge&logo=googlechrome&logoColor=white&label=Chrome%20Web%20Store)](https://chromewebstore.google.com/detail/ronaldo-siuuu-click-or-ct/ajjnpmpdkgkcfolnmkfjaeimhaebcpfn)
+[![Chrome Web Store Users](https://img.shields.io/chrome-web-store/users/ajjnpmpdkgkcfolnmkfjaeimhaebcpfn?style=for-the-badge&logo=googlechrome&logoColor=white)](https://chromewebstore.google.com/detail/ronaldo-siuuu-click-or-ct/ajjnpmpdkgkcfolnmkfjaeimhaebcpfn)
+
 A fun Chrome extension that plays Cristiano Ronaldo's iconic "Siuuu!" celebration sound with just a click or keyboard shortcut.
 
 ![Ronaldo Siuuu!](icon.png)
@@ -13,6 +16,15 @@ A fun Chrome extension that plays Cristiano Ronaldo's iconic "Siuuu!" celebratio
 
 ## 🚀 Installation
 
+### From Chrome Web Store (Recommended)
+
+**[📥 Install from Chrome Web Store](https://chromewebstore.google.com/detail/ronaldo-siuuu-click-or-ct/ajjnpmpdkgkcfolnmkfjaeimhaebcpfn)**
+
+1. Click the link above or search for "Ronaldo Siuuu!" in the Chrome Web Store
+2. Click "Add to Chrome" 
+3. Confirm by clicking "Add extension"
+4. Pin the extension to your toolbar for easy access
+
 ### From Source (Development)
 
 1. **Clone or Download** this repository
@@ -20,10 +32,6 @@ A fun Chrome extension that plays Cristiano Ronaldo's iconic "Siuuu!" celebratio
 3. **Enable Developer Mode** (toggle in top-right corner)
 4. **Click "Load unpacked"** and select the extension folder
 5. **Pin the extension** to your toolbar for easy access
-
-### From Chrome Web Store
-
-*Coming soon - extension will be published to the Chrome Web Store*
 
 ## 🎮 Usage
 

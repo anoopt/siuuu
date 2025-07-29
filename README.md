@@ -9,10 +9,11 @@ A fun Chrome extension that plays Cristiano Ronaldo's iconic "Siuuu!" celebratio
 
 ## 🎵 Features
 
-- **One-Click Sound**: Click the extension icon to instantly hear Ronaldo's "Siuuu!" 
+- **One-Click Sound**: Click the extension icon to instantly hear Ronaldo's "Siuuu!" with a fun animated popup
 - **Keyboard Shortcut**: Press `Ctrl+Shift+S` (or `Cmd+Shift+S` on Mac) for quick access
-- **Smart Error Handling**: Shows a helpful popup when sound can't be played on restricted pages
-- **Works Everywhere**: Functions on any regular webpage
+- **Animated Celebration**: Shows a shaking Ronaldo icon with gradient background during sound playback
+- **Smart Auto-Close**: Popup automatically closes when the sound finishes playing
+- **Works Everywhere**: Functions on any webpage, including Chrome internal pages
 - **Privacy First**: No data collection, completely offline after installation
 
 ## 🚀 Installation
@@ -38,23 +39,24 @@ A fun Chrome extension that plays Cristiano Ronaldo's iconic "Siuuu!" celebratio
 
 ### Method 1: Click the Icon
 - Look for the Ronaldo extension icon in your Chrome toolbar
-- Click it to play the "Siuuu!" sound instantly
-- On restricted pages (like Chrome settings), a helpful popup will explain why the sound can't play
+- Click it to see an animated popup with Ronaldo's shaking icon
+- Hear the "Siuuu!" sound play while the icon shakes
+- Popup automatically closes when the sound finishes
 
 ### Method 2: Keyboard Shortcut
 - Press `Ctrl+Shift+S` (Windows/Linux) or `Cmd+Shift+S` (Mac)
-- Works on any regular webpage
-- On restricted pages, shows a popup with helpful information
+- Same animated popup experience as clicking the icon
+- Works on any webpage, including Chrome internal pages
 
 ## 📁 Project Structure
 
 ```
 Ronaldo Siu Extension/
 ├── manifest.json       # Extension configuration
-├── background.js       # Main extension logic
-├── popup.html         # Error popup interface
-├── popup.js           # Popup logic and auto-close
-├── icon.png           # Default extension icon
+├── background.js       # Icon click and keyboard shortcut handlers
+├── popup.html         # Animated popup interface with celebration theme
+├── popup.js           # Popup logic, audio playback, and auto-close
+├── icon.png           # Extension icon (also used in popup animation)
 ├── siuuu.mp3         # Ronaldo's "Siuuu!" sound file
 └── README.md         # This file
 ```
@@ -62,12 +64,11 @@ Ronaldo Siu Extension/
 ## 🛠️ Technical Details
 
 - **Manifest Version**: 3 (latest Chrome extension standard)
-- **Permissions**: 
-  - `activeTab`: Interact with current webpage
-  - `scripting`: Inject audio playback script
-- **Service Worker**: Background script for handling icon clicks and shortcuts
-- **Audio Playback**: Uses Web Audio API via content script injection
-- **Error Handling**: Smart popup system that only appears when sound cannot be played
+- **Permissions**: None required! (minimal permission footprint)
+- **Service Worker**: Background script for handling icon clicks and keyboard shortcuts
+- **Audio Playback**: Direct audio playback in popup context
+- **Animation**: CSS keyframe animations for celebration effect
+- **Auto-Close**: Popup closes automatically when audio finishes playing
 
 ## 🔧 Development
 
@@ -113,14 +114,17 @@ Ronaldo Siu Extension/
 
 ### Sound Not Playing
 - Check if audio is muted in your browser/system
-- If on a Chrome internal page (`chrome://`, `edge://`, etc.), you'll see a helpful popup explaining the limitation
-- Try the extension on a regular website like Google, YouTube, or any news site
-- Refresh the webpage and try again if needed
+- The animated popup should appear regardless of audio settings
+- Try refreshing the extension if needed (go to `chrome://extensions/` and click reload)
 
+### Animation Not Working
+- Make sure the popup appears when clicking the icon
+- If popup appears but no animation, try reloading the extension
+- Check browser console for any JavaScript errors
 
 ### Keyboard Shortcut Not Working
 - Check if another extension is using the same shortcut
-- Try the shortcut on a regular webpage (not Chrome settings pages)
+- Try the shortcut on any webpage
 - Reload the extension if you changed the shortcut
 
 ## 🤝 Contributing

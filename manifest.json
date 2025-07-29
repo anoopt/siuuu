@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
   "name": "Ronaldo Siuuu! (Click or Ctrl+Shift+S)",
-  "version": "0.1.1",
+  "version": "0.2.0",
   "description": "Plays Ronaldo's 'Siuuu' sound with a click or keyboard shortcut.",
   "author": "Anoop T",
   "homepage_url": "https://github.com/anoopt/siuuu",
@@ -11,10 +11,6 @@
     "48": "icon.png",
     "128": "icon.png"
   },
-  "permissions": [
-    "activeTab",
-    "scripting"
-  ],
   "background": {
     "service_worker": "background.js"
   },

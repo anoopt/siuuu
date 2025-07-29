@@ -24,11 +24,22 @@
         "mac": "MacCtrl+Shift+S"
       },
       "description": "Play the Siuuu sound"
+    },
+    "toggle_mode": {
+      "suggested_key": {
+        "default": "Alt+Shift+M",
+        "mac": "Alt+Shift+M"
+      },
+      "description": "Toggle between icon and video mode"
     }
   },
+  "permissions": [
+    "contextMenus",
+    "storage"
+  ],
   "web_accessible_resources": [
     {
-      "resources": ["siuuu.mp3", "icon.png"],
+      "resources": ["siuuu.mp3", "siuuu.mp4", "icon.png"],
       "matches": ["<all_urls>"]
     }
   ]
